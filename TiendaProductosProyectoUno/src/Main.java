@@ -1,10 +1,8 @@
 
-import config.Conection;
+import controller.*;
 
 
 public class Main {
     public static void main(String[] args) {
-        Conection cn=new Conection();
-        cn.geConnection();
     }
 }
