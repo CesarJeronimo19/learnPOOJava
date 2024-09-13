@@ -25,6 +25,7 @@ public class EmpleadoService implements IGestionarCRUD{
 
     @Override
     public void listDB() {
+        EmpleadoDAO.listDB();
     }
 
     @Override
