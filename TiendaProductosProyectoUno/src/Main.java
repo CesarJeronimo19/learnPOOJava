@@ -1,12 +1,11 @@
 
-import controller.*;
+import controller.principalTienda;
 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hola");
-        
-        EmpleadoService es=new EmpleadoService();
-        //es.listDB();
+        principalTienda pt=new principalTienda();
+        pt.controladorPrincipal();
+
     }
 }

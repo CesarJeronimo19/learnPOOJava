@@ -3,21 +3,35 @@ package controller;
 
 import dao.EmpleadoDAO;
 import java.util.Arrays;
+import java.util.Scanner;
 import model.Empleado;
 
 
 public class EmpleadoService implements IGestionarCRUD{
-
+    Scanner sc=new Scanner(System.in);
     @Override
-    public void createDB(Object[] pers) {
-        System.out.println(pers[1]);
+    public void createDB() {
         
         Empleado empl=new Empleado();
-        empl.setNombre((String) pers[0]);
-        empl.setTelefono((String) pers[1]);
-        empl.setDireccion((String) pers[4]);
-        empl.setEdad((int) pers[2]);
-        empl.setSueldo((double) pers[3]);
+        System.out.println("Ingresa el nombre");
+            String nombre=sc.next();
+                empl.setNombre(nombre);
+            
+        System.out.println("Ingresa el telefono");
+            String telefono=sc.next();
+                empl.setTelefono(telefono);
+                
+        System.out.println("Ingresa la direccion");
+            String dir=sc.next();
+                empl.setDireccion(dir);
+                
+        System.out.println("Ingresa la edad");
+            int edad=sc.nextInt();
+                empl.setEdad(edad);
+                
+        System.out.println("Ingresa el sueldo");
+            double sueldo=sc.nextDouble();
+                empl.setSueldo(sueldo);
         empl.setEstatus(1);
         
         EmpleadoDAO.createDB(empl);
